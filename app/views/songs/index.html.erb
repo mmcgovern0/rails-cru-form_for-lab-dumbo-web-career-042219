@@ -1,0 +1,15 @@
+<p>My Songs</p>
+<%= link_to "Create a Song", new_song_path %><br>
+
+<ul>
+	<% @songs.each do |song| %>
+	<li>
+		<%= link_to song.name, song_path(song) %><br>
+		<%= label_tag 'artist' %>
+ 	 	<%= song.artist_id %>
+  		<%= label_tag 'genre' %>
+  		<%= song.genre_id %>
+	</li>
+	<% end %>
+</ul>
+

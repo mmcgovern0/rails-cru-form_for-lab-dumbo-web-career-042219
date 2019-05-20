@@ -1,0 +1,7 @@
+<h1><%= @genre.name %></h1><br>
+
+<%= link_to "Home", genres_path %><br>
+
+<%= form_tag genre_path(@genre), method: "DELETE" do %>
+	<%= submit_tag "Delete #{@genre.name}" %>
+<% end %>
